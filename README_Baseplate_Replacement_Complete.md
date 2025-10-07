@@ -2,7 +2,7 @@
 
 This tool replaces the bottom layers of a 3D model with baseplate layers, creating a solid foundation for printing. Perfect for large prints that need better bed adhesion and reduced warping.
 
-## 🎯 What This Tool Does
+## What This Tool Does
 
 - **Replaces bottom layers** of your 3D model with dense baseplate layers
 - **Maintains full model height** and all original features
@@ -10,14 +10,14 @@ This tool replaces the bottom layers of a 3D model with baseplate layers, creati
 - **Adds optional startup sound** (Rick Roll)
 - **Preserves all print settings** and quality
 
-## 📋 Prerequisites
+## Prerequisites
 
 - **Bambu Studio** (or compatible slicer)
 - **Python 3.6+**
 - **Command line tools**: `unzip`, `zip`, `md5`
 - **Two separate G-code files** (see setup below)
 
-## 🛠️ Setup Process
+## Setup Process
 
 ### Step 1: Prepare Your 3D Model
 
@@ -74,7 +74,7 @@ python replace_baseplate_layers.py baseplate.gcode.3mf model.gcode.3mf output.gc
 python replace_baseplate_layers.py baseplate.gcode.3mf model.gcode.3mf output.gcode.3mf --verbose
 ```
 
-## 📊 What You Get
+## What You Get
 
 ### Input Files
 - **Baseplate 3MF**: 5 layers, ~1mm height, dense infill
@@ -88,7 +88,7 @@ python replace_baseplate_layers.py baseplate.gcode.3mf model.gcode.3mf output.gc
   - Print time: Same as original model
   - Filament usage: Slightly more due to baseplate
 
-## ✅ Benefits
+## Benefits
 
 - **Better bed adhesion** - solid foundation prevents lifting
 - **Reduced warping** - especially on large prints
@@ -97,7 +97,7 @@ python replace_baseplate_layers.py baseplate.gcode.3mf model.gcode.3mf output.gc
 - **Progress tracking** - accurate percentage display
 - **One continuous print** - no filament unloading
 
-## 🔧 Technical Details
+## Technical Details
 
 ### Layer Structure
 ```
@@ -119,7 +119,7 @@ Combined Result:    [Base 1]  [Base 2]  [Base 3]  [Base 4]  [Base 5]  [Model 6] 
 - **Solution**: Automatically removes M73 commands from baseplate layers
 - **Result**: Accurate progress display throughout entire print
 
-## 🎵 Startup Sound
+## Startup Sound
 
 The tool includes an optional Rick Roll startup sound that plays when printing begins:
 
@@ -132,7 +132,7 @@ python replace_baseplate_layers.py baseplate.gcode.3mf model.gcode.3mf output.gc
 - **Plays**: Before actual printing begins
 - **Can be disabled**: Omit `--startup-sound` flag
 
-## 📁 File Structure
+## File Structure
 
 ```
 your_project/
@@ -143,7 +143,7 @@ your_project/
 └── my_model_with_baseplate.gcode.3mf   # Output: combined
 ```
 
-## 🚨 Troubleshooting
+## Troubleshooting
 
 ### Common Issues
 
@@ -170,22 +170,22 @@ your_project/
 3. Check that first 5 layers are dense baseplate
 4. Confirm no shutdown commands between layers 5 and 6
 
-## 📈 Success Indicators
+## Success Indicators
 
-✅ **Successful completion shows:**
+**Successful completion shows:**
 - "Successfully created combined G-code file"
 - "Successfully created: [output_file]"
 - File size ~12-13MB (similar to original)
 - Can be opened in Bambu Studio
 
-✅ **Verification checklist:**
+**Verification checklist:**
 - Extract G-code and check layer numbers
 - Layers 1-5 should be baseplate (dense)
 - Layers 6-N should be model (normal density)
 - Total layers = original model layers
 - No G92 E0 or M104 S0 between layers 5 and 6
 
-## 💡 Tips for Best Results
+## Tips for Best Results
 
 ### Baseplate Design
 - **Keep it simple** - rectangular or match model outline
@@ -206,7 +206,7 @@ your_project/
 - **Use appropriate bed temperature**
 - **Consider brim** for extra adhesion
 
-## 🔄 Workflow Summary
+## Workflow Summary
 
 1. **Design your model** in CAD
 2. **Create simple baseplate** (1-2mm thick)
@@ -215,17 +215,3 @@ your_project/
 5. **Run the tool** to combine them
 6. **Print the combined file** in Bambu Studio
 7. **Remove baseplate** after printing (cut or break away)
-
-## 📞 Support
-
-If you encounter issues:
-1. Check the troubleshooting section above
-2. Verify your input files are valid Bambu Studio 3MF files
-3. Ensure you have the required command line tools
-4. Try running with `--verbose` for detailed output
-
----
-
-**Happy Printing! 🎉**
-
-This tool gives you the best of both worlds: a solid foundation for reliable printing while maintaining all the detail and quality of your original model.

@@ -2,7 +2,7 @@
 
 A Python tool that replaces the bottom layers of a 3D model with baseplate layers, creating a solid foundation for printing. Perfect for large prints that need better bed adhesion and reduced warping.
 
-## 🎯 What This Tool Does
+## What This Tool Does
 
 - **Replaces bottom layers** of your 3D model with dense baseplate layers
 - **Maintains full model height** and all original features
@@ -10,19 +10,19 @@ A Python tool that replaces the bottom layers of a 3D model with baseplate layer
 - **Adds optional startup sound** (Rick Roll)
 - **Preserves all print settings** and quality
 
-## 🚀 Quick Start
+## Quick Start
 
 ```bash
 python replace_baseplate_layers.py baseplate.gcode.3mf model.gcode.3mf output.gcode.3mf
 ```
 
-## 📋 Prerequisites
+## Prerequisites
 
 - **Bambu Studio** (or compatible slicer)
 - **Python 3.6+**
 - **Command line tools**: `unzip`, `zip`, `md5`
 
-## 🛠️ Setup Process
+## Setup Process
 
 ### Step 1: Prepare Your 3D Model
 1. **Open your 3D model** in Bambu Studio
@@ -43,11 +43,11 @@ python replace_baseplate_layers.py baseplate.gcode.3mf model.gcode.3mf output.gc
 python replace_baseplate_layers.py my_baseplate.gcode.3mf my_model.gcode.3mf my_model_with_baseplate.gcode.3mf
 ```
 
-## 📖 Complete Documentation
+## Complete Documentation
 
 For detailed instructions, troubleshooting, and advanced usage, see [README_Baseplate_Replacement_Complete.md](README_Baseplate_Replacement_Complete.md).
 
-## ✅ Benefits
+## Benefits
 
 - **Better bed adhesion** - solid foundation prevents lifting
 - **Reduced warping** - especially on large prints
@@ -56,7 +56,7 @@ For detailed instructions, troubleshooting, and advanced usage, see [README_Base
 - **Progress tracking** - accurate percentage display
 - **One continuous print** - no filament unloading
 
-## 🎵 Optional Features
+## Optional Features
 
 ### Rick Roll Startup Sound
 ```bash
@@ -68,13 +68,13 @@ python replace_baseplate_layers.py baseplate.gcode.3mf model.gcode.3mf output.gc
 python replace_baseplate_layers.py baseplate.gcode.3mf model.gcode.3mf output.gcode.3mf --layers 3
 ```
 
-## 📁 Files
+## Files
 
 - `replace_baseplate_layers.py` - Main tool
 - `README_Baseplate_Replacement_Complete.md` - Complete documentation
 - `README.md` - This quick start guide
 
-## 🔧 Technical Details
+## Technical Details
 
 The tool:
 1. **Extracts G-code** from both 3MF files
@@ -84,19 +84,9 @@ The tool:
 5. **Repackages** into new 3MF file
 6. **Updates metadata** (MD5 hash, etc.)
 
-## 🚨 Troubleshooting
+## Troubleshooting
 
 - Ensure input files are valid Bambu Studio 3MF files
 - Use identical settings for baseplate and model
 - Check file permissions and disk space
 - Run with `--verbose` for detailed output
-
-## 📞 Support
-
-If you encounter issues, check the complete documentation or create an issue on GitHub.
-
----
-
-**Happy Printing! 🎉**
-
-This tool gives you the best of both worlds: a solid foundation for reliable printing while maintaining all the detail and quality of your original model.
