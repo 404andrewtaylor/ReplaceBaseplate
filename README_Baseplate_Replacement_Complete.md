@@ -52,7 +52,7 @@ This tool replaces the bottom layers of a 3D model with baseplate layers, creati
 python replace_baseplate_layers.py my_baseplate.gcode.3mf my_model.gcode.3mf my_model_with_baseplate.gcode.3mf
 ```
 
-## 🚀 Usage Examples
+## Usage Examples
 
 ### Basic Usage
 ```bash
